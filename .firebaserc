@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "cochepooling-v1": {
+      "hosting": {
+        "cochePooling-V1": [
+          "cochepooling-v1"
+        ]
+      }
+    }
+  }
+}

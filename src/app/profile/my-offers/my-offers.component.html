@@ -1,0 +1,81 @@
+<table class="items-center w-full bg-transparent border-collapse">
+    <thead>
+      <tr>
+        <th
+          class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+          Driver
+        </th>
+        <th
+          class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+          Departure
+        </th>
+        <th
+          class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+          Arrival
+        </th>
+        <th
+          class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+          Date
+        </th>
+        <th
+          class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+          Departure Time
+        </th>
+        <th
+          class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+          Passangers
+        </th>
+        <th
+          class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+          Statut
+        </th>
+        <th
+          class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+  
+  
+        <tr *ngFor="let item of offers$|async">
+          <th
+            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
+            <img [src]="item?.driver?.emailAvatar|userAvatar" class="h-12 w-12 bg-white rounded-full border" alt="..." />
+            <span class="ml-3 font-bold">
+              {{item?.driver.firstName}}
+            </span>
+          </th>
+          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+            {{item.departure}}
+          </td>
+          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+            {{item.arrival}}
+          </td>
+          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+            <i class="fas fa-circle text-orange-500 mr-2"></i>
+            {{item.date}}
+          </td>
+          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+            {{item.departureTime}}
+          </td>
+          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+            
+            <div class="flex">
+              <img src="https://image.freepik.com/vecteurs-libre/profil-avatar-homme-icone-ronde_24640-14049.jpg" alt="..."
+                class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Profil_Avatar_S.jpg" alt="..."
+                class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4" />
+            </div>
+          </td>
+          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+            <div class="flex items-center">
+              <span class="mr-4">
+                {{item.statut}}
+              </span>
+            </div>
+          </td>
+          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right">
+          </td>
+        </tr>
+    </tbody>
+  </table>

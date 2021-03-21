@@ -1,0 +1,57 @@
+<div class="min-h-screen flex items-center justify-center">
+
+    <div class="bg-white p-16 rounded shadow-2xl w-2/3">
+  
+      <h2 class="text-3xl font-bold mb-10 text-gray-800">Create your journey offer</h2>
+  
+      <div class="space-y-5">
+  
+        <div>
+          <label class="block mb-1 font-bold text-gray-500">Departure</label>
+          <input [(ngModel)]="offer.departure" type="text"
+            class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-purple-500">
+        </div>
+  
+        <div>
+            <label class="block mb-1 font-bold text-gray-500">Arrival</label>
+            <input [(ngModel)]="offer.arrival" type="text"
+              class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-purple-500">
+        </div>
+  
+        <div>
+            <label class="block mb-1 font-bold text-gray-500">Date</label>
+            <input [(ngModel)]="offer.date" type="date"
+              class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-purple-500">
+        </div>
+        <div>
+            <label class="block mb-1 font-bold text-gray-500">Time</label>
+            <input [(ngModel)]="offer.departureTime" type="time"
+              class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-purple-500">
+        </div>
+
+        <div>
+            <label class="block mb-1 font-bold text-gray-500">Luggage</label>
+            <input [(ngModel)]="offer.luggage" type="text"
+              class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-purple-500">
+        </div>
+        <div>
+            <label class="block mb-1 font-bold text-gray-500">Prix</label>
+            <input [(ngModel)]="offer.prix" type="number"
+              class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-purple-500">
+        </div>
+
+        <div>
+            <label class="block mb-1 font-bold text-gray-500">Available seats</label>
+            <input [(ngModel)]="offer.availableSeats" type="number"
+              class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-purple-500">
+        </div>
+  
+        <button (click)="createOffer()"
+          class="block w-full bg-blue-400 hover:bg-blue-300 p-4 rounded text-blue-900 hover:text-blue-800 transition duration-300">
+          Create
+        </button>
+  
+      </div>
+  
+    </div>
+</div>

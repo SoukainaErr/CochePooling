@@ -1,0 +1,65 @@
+<div
+  class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg mt-16"
+>
+  <div class="px-6">
+    <div class="flex flex-wrap justify-center">
+      <div class="w-full px-4 flex justify-center">
+        <div class="relative">
+          <img
+            alt="..."
+            src="https://www.mecenavie.com/wp-content/uploads/2019/06/Capture%20d%E2%80%99%C3%A9cran%202019-06-15%20%C3%A0%2000.13.10-950x1024.png"
+            class="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px"
+          />
+        </div>
+      </div>
+      <div class="w-full px-4 text-center mt-20">
+        <div class="flex justify-center py-4 lg:pt-4 pt-8">
+          <div class="mr-4 p-3 text-center">
+            <span
+              class="text-xl font-bold block uppercase tracking-wide text-blueGray-600"
+            >
+              
+            </span>
+            <span class="text-sm text-blueGray-400">Journeys</span>
+          </div>
+          <div class="mr-4 p-3 text-center">
+            <span
+              class="text-xl font-bold block uppercase tracking-wide text-blueGray-600"
+            >
+              
+            </span>
+            <span class="text-sm text-blueGray-400">Passanger</span>
+          </div>
+          <div class="lg:mr-4 p-3 text-center">
+            <span
+              class="text-xl font-bold block uppercase tracking-wide text-blueGray-600"
+            >
+              
+            </span>
+            <span class="text-sm text-blueGray-400">Driver</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-12">
+      <h3
+        class="text-xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2"
+      >
+      Name: {{(user$|async).firstName}} {{(user$|async).lastName}}
+      </h3>
+      <div
+        class="text-sm leading-normal mt-0 mb-2 text-blueGray-400 font-bold uppercase"
+      >
+        <i class="fas fa-map-marker-alt mr-2 text-lg text-blueGray-400"></i>
+        email: {{(user$|async).email}}
+      </div>
+      <div class="mb-2 text-blueGray-600 mt-10">
+        <i class="fas fa-briefcase mr-2 text-lg text-blueGray-400"></i>
+        
+      </div>
+      
+    </div>
+    
+  </div>
+</div>
+

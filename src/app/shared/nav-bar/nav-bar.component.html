@@ -1,0 +1,45 @@
+<header class="lg:px-16 px-6 bg-white flex flex-wrap items-center lg:py-0 py-2">
+    <div class="flex-1 flex justify-between items-center">
+        <a routerLink="/">
+            <img width="52" height="56" viewBox="0 0 20 20" src="../assets/img/cochepooling.png">
+        </a>
+    </div>
+
+    <div class="hidden lg:flex lg:items-center lg:w-auto w-full" id="menu">
+
+        <ng-container *ngIf="isConnected$|async">
+            <nav>
+                <ul class="lg:flex items-center justify-between text-base text-gray-700 pt-4 lg:pt-0">
+                    <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400"
+                            routerLink="/app/my-offers">My journeys</a></li>
+                    <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400"
+                            routerLink="/app/create-offer">Create journey</a></li>
+                    <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400"
+                            routerLink="/app/edit-profile">Profile</a></li>
+                    <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400 lg:mb-0 mb-2"
+                            (click)="onLogOut()">log out</a></li>
+                </ul>
+            </nav>
+            <div class="lg:ml-4 flex items-center justify-start lg:mb-0 mb-4 pointer-cursor">
+                <img alt="{{(connectedUser$|async)?.firstName}}"
+                    class="rounded-full w-10 h-10 border-2 border-transparent hover:border-indigo-400"
+                    src="https://www.mecenavie.com/wp-content/uploads/2019/06/Capture%20d%E2%80%99%C3%A9cran%202019-06-15%20%C3%A0%2000.13.10-950x1024.png">
+            </div>
+
+        </ng-container>
+
+        <ng-container *ngIf="!(isConnected$|async)">
+            <nav>
+                <ul class="lg:flex items-center justify-between text-base text-gray-700 pt-4 lg:pt-0">
+                    <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400"
+                            routerLink="/signin">sign In</a></li>
+                    <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400"
+                            routerLink="/signup">Sign Up</a></li>
+                </ul>
+            </nav>
+
+        </ng-container>
+
+    </div>
+
+</header>

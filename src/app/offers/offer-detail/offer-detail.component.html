@@ -1,0 +1,37 @@
+<section class="text-gray-700 body-font overflow-hidden bg-white">
+    <div class="container px-5 py-24 mx-auto">
+      
+      <ng-container *ngIf="offer$|async as offer;else loadingOffer" >
+  
+        <div class=" w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0 justify-center items-center">
+          <h2 class="text-sm title-font text-gray-500 tracking-widest">{{offer.driver.firstName}}</h2>
+          <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">{{offer.departure}} to {{offer.arrival}}</h1>
+          <p class="leading-relaxed">
+            Date : {{offer.date}} <br/>
+            Time : {{offer.departureTime}} <br/>
+            Date : {{offer.luggage}} <br/>
+            AvailableSeats : {{offer.availableSeats}} <br/>
+            Statut : {{offer.statut}}
+          </p>
+          
+          <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
+            <div class="flex ml-6 items-center">
+                <span class="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4" viewBox="0 0 24 24">
+                    <path d="M6 9l6 6 6-6"></path>
+                  </svg>
+                </span>
+            </div>
+          </div>
+
+          <div class="flex">
+            <span class="title-font font-medium text-2xl text-gray-900">{{offer.prix}}€</span>
+            <button class="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">Book</button>
+          </div>
+        </div>
+      </ng-container>
+      <ng-template #loadingOffer>
+        Page in loading.....
+      </ng-template>
+      </div>
+  </section>
